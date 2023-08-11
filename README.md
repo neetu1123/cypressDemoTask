@@ -2,7 +2,7 @@
 ``npx cypress open``
 
 
-📝 **Task To Do:** Create 3 different test-case.
+📝 **Task To Do:** Create 3 different test-case inside the file ``Cypress -> e2e -> spec.cy.js``.
 
 1) On clicking the clear button,
 
