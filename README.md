@@ -1,8 +1,31 @@
-# Vue 3 + Vite
+**To open cypress:**
+``npx cypress open``
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+📝 **Task To Do:** Create 3 different test-case.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-# cypressDemoTask
+1) On clicking the clear button,
+
+		👉🏻 The Form should get cleared.
+
+2) On Submitting the empty Form,
+
+		👉🏻 An error message should get shown.
+
+3) On Submitting the filled Form,
+
+		👉🏻 User greeting message should be shown with his/her name.
+
+		👉🏻 "< User email > subscribed the newsletter", should be visible.
+	
+		👉🏻 Submit button must be disabled.
+
+---
+
+**🎯Learning**
+
+**Cypress Getting started** ``https://docs.cypress.io/guides/getting-started/opening-the-app``
+
+**Cypress Tutorial link:** ``https://learn.cypress.io/testing-your-first-application``
+
+**Cypress API:** ``https://docs.cypress.io/api/table-of-contents``
