@@ -20,10 +20,10 @@
 
       <div class="space-y-6 my-10">
           <p class="text-center">How are you? (Optional)</p>
-          <ul class="flex justify-evenly">
-            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input data-Awsome="Awsome" v-model="picked" id="Awsome" value="Awsome" type="radio"/> <label for="Awsome" >Awsome</label> </li>
-            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input data-Great="Great" v-model="picked" id="Great" value="Great" type="radio"/> <label for="Great" >Great</label> </li>
-            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input data-Fantastic="Fantastic" v-model="picked" id="Fantastic" value="Fantastic" type="radio"/> <label for="Fantastic" >Fantastic</label> </li>
+          <ul data-HAY="HAY" class="flex justify-evenly">
+            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input v-model="picked" id="Awsome" value="Awsome" type="radio"/> <label for="Awsome" >Awsome</label> </li>
+            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input v-model="picked" id="Great" value="Great" type="radio"/> <label for="Great" >Great</label> </li>
+            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input v-model="picked" id="Fantastic" value="Fantastic" type="radio"/> <label for="Fantastic" >Fantastic</label> </li>
           </ul>          
       </div>
 
@@ -49,7 +49,7 @@
     </form>
 
     <p data-success="success" v-if="isSubmit" class="text-green-800">**{{ userEmail }} successfully subscribed the newsletter.</p>
-    <p data-error="error" v-if="showErrorMsg" class="text-red-800">**All fields are required.</p>
+    <p data-errorMsg="errorMsg" v-if="showErrorMsg" class="text-red-800">**All fields are required.</p>
   </section>
 </template>
 
