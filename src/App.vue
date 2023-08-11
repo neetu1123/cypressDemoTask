@@ -21,9 +21,9 @@
       <div class="space-y-6 my-10">
           <p class="text-center">How are you? (Optional)</p>
           <ul class="flex justify-evenly">
-            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input v-model="picked" id="Awsome" value="Awsome" type="radio"/> <label for="Awsome" >Awsome</label> </li>
-            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input v-model="picked" id="Great" value="Great" type="radio"/> <label for="Great" >Great</label> </li>
-            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input v-model="picked" id="Fantastic" value="Fantastic" type="radio"/> <label for="Fantastic" >Fantastic</label> </li>
+            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input data-Awsome="Awsome" v-model="picked" id="Awsome" value="Awsome" type="radio"/> <label for="Awsome" >Awsome</label> </li>
+            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input data-Great="Great" v-model="picked" id="Great" value="Great" type="radio"/> <label for="Great" >Great</label> </li>
+            <li :class="[isSubmit && 'bg-green-100']" class="bg-sky-100 p-2 px-4 rounded-md space-x-2"><input data-Fantastic="Fantastic" v-model="picked" id="Fantastic" value="Fantastic" type="radio"/> <label for="Fantastic" >Fantastic</label> </li>
           </ul>          
       </div>
 
@@ -50,9 +50,6 @@
 
     <p data-success="success" v-if="isSubmit" class="text-green-800">**{{ userEmail }} successfully subscribed the newsletter.</p>
     <p data-error="error" v-if="showErrorMsg" class="text-red-800">**All fields are required.</p>
-
-    <p data-x='x' class="text-2xl" v-show="timeout">x_x</p>
-    <p data-o='o' class="text-2xl" v-if="timeout">o_o</p>
   </section>
 </template>
 
@@ -86,6 +83,4 @@ function submitHandler(){
   (userName.value && userEmail.value) && (isSubmit.value = true);
   (!userName.value || !userEmail.value) && (showErrorMsg.value = true);
 }
-
-setTimeout(()=>{ timeout.value = false }, 1000)
 </script>
